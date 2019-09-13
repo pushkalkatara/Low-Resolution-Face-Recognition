@@ -1,0 +1,93 @@
+swagger: "2.0"
+
+info:
+  title: Face Recognition API
+  version: "1.0"
+
+paths:
+  /face/classify:
+    post:
+      summary: Perform facial recognition.
+      description: This operation performs facial recognition. You can upload images that contain only one person.
+      operationId: facerec.classify
+      consumes:
+        - multipart/form-data
+      produces:
+        - text/json;
+      responses:
+        200:
+          description: classification response
+          schema:
+            type: string
+          examples:
+            "text/json": "{result: 'success', name: 'John'}"
+      parameters:
+        - name: file
+          in: formData
+          description: Image file to classify.
+          required: true
+          type: file
+  
+  /face/add:
+    post:
+      summary: Add a new faces to the Face Recognition API database.
+      description: This operation adds new faces to the Face Recognition API database. You can upload videos or images that contain only one person.
+      operationId: facerec.add
+      consumes:
+        - multipart/form-data
+      produces:
+        - text/json;
+      responses:
+        200:
+          description: add response
+          schema:
+            type: string
+          examples:
+            "text/json": "{result: 'success', message: 'File uploaded!'}"
+      parameters:
+        - name: file
+          in: formData
+          description: Image or video file.
+          required: true
+          type: file
+          x-mimetype: video/mp4
+        - name: personName
+          in: formData
+          description: Person name.
+          required: true
+          type: string
+        - name: rotate
+          in: formData
+          description: Rotate degree.
+          required: false
+          type: string
+
+  /face/train:
+    post:
+      summary: Train the model to recognize the new faces.
+      description: This operation trains the model to recognize the new faces added by the "/face/add" operation.
+      operationId: facerec.train
+      produces:
+        - text/json;
+      responses:
+        200:
+          description: train model response
+          schema:
+            type: string
+          examples:
+            "text/json": "{result: 'success', message: 'Model will be trained!'}"
+
+  /face/restart:
+    post:
+      summary: Reload the Face Recognition API model.
+      description: This operation reloads the Face Recognition API model if you experience any problems.
+      operationId: facerec.restart
+      produces:
+        - text/json;
+      responses:
+        200:
+          description: restart response
+          schema:
+            type: string
+          examples:
+            "text/json": "{result: 'success', message: 'Model restarted!'}"

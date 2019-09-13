@@ -1,0 +1,13 @@
+tensorflow-gpu==1.13.1
+scipy==1.2.1
+scikit-learn==0.20.3
+numpy==1.16.2
+Pillow
+requests
+connexion
+swagger_ui_bundle
+tornado
+opencv-contrib-python
+h5py
+ffmpeg-python
+oci

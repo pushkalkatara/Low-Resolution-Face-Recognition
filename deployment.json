@@ -1,0 +1,14 @@
+{
+    "IMAGE_UPLOAD_DIR": "./images/uploaded/",
+    "IMAGE_ORIGINAL_DIR": "./images/original/",
+    "IMAGE_PREPARED_DIR": "./images/prepared/",
+    "MODEL_PATH": "./model/20180402-114759.pb",
+    "CLASSIFIER_PATH": "./classifier/classifier.pkl",
+    
+    "CLASSIFY_IMAGE_WIDTH": 150,
+    "ADD_FRAMES_PER_VIDEO": 25,
+
+    "OCI_STORAGE_SYNC": false,
+    "OCI_CONFIG_PATH": "./config/config.prod",
+    "OCI_STORAGE_BUCKET_NAME": "facerec-images"
+}
