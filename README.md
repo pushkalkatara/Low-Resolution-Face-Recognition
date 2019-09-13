@@ -3,10 +3,10 @@
 ## Basic Instalation - UBUNTU
 
 1) Clone this project:<br />
-$ git clone https://github.com/waslleysouza/face_recognition_api
+$ git clone https://github.com/pushkalkatara/Low-Resolution-Face-Recognition
 
-2) Go to face_recognition_api folder:<br />
-$ cd face_recognition_api
+2) Go to Face Recognition folder:<br />
+$ cd Low-Resolution-Face-Recognition
 
 3) Install the application:
     - If you have CPU:<br />
@@ -37,7 +37,8 @@ $ ./start-app.sh
 ## Inspiration
 
 I use the ![Facenet](https://github.com/davidsandberg/facenet) implementation in this code.
-
+I use the ![SRGAN](https://github.com/tadax/srgan) implementation in this code.
+I use the ![face_recognition_api](https://github.com/waslleysouza/face_recognition_api) reference in this code.
 
 ## License
 
